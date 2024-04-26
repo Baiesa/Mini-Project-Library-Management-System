@@ -17,7 +17,8 @@ def main_menu():
     print("2. User Operations")
     print("3. Author Operations")
     print("4. Genre Operations")
-    print("5. Quit")
+    print("5. Display")
+    print("6. Quit")
 
     choice = validate_input("Enter your choice: ", r"[1-5]")
     return int(choice)

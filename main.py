@@ -4,6 +4,8 @@
 from classes import *
 from menu_actions import *
 
+library = Library()
+
 while True:
     choice = main_menu()
 
@@ -11,6 +13,7 @@ while True:
         book_choice = book_menu()
         if book_choice == 1: 
             book = add_book()
+            library.books.append(book)
             print("New book added:", book)
 
     elif choice == 2: 
@@ -30,8 +33,13 @@ while True:
         if genre_choice == 1:  
             genre = add_genre()
             print("New genre added:", genre.name)
-   
-    elif choice == 5: 
+            
+    elif choice == 5:
+        for book in library.books:
+            print(book.title)
+        
+
+    elif choice == 6: 
         print("Thank you for using the Library Management System. Goodbye!")
         break
     else:

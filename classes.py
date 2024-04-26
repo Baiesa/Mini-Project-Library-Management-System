@@ -11,6 +11,16 @@ class Book:
     
     def __str__(self):
         return f"{self.title} by {self.author}"
+    
+    
+class Library:
+    def __init__(self):
+        self.books = []
+
+
+
+
+
 
 class User:
     def __init__(self, name, library_id):
